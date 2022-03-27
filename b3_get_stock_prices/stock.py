@@ -11,7 +11,9 @@ def get_price_description(symbol):
     try:
         price = j['Trad'][0]['scty']['SctyQtn']['curPrc']
         description = j['Trad'][0]['scty']['desc']
+        time = j['Msg']['dtTm']
     except:
         price = None
         description = None
-    return j, description, price
+        time = None
+    return j, description, price, time

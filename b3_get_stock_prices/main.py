@@ -7,8 +7,8 @@ from rrcq.rrcq import RedisReadyCircularQueue
 
 
 def main_routine(stock_symbol):
-    j, description, price = get_price_description(stock_symbol)
-    set_stock_price_and_description(stock_symbol, description, price)
+    j, description, price, time = get_price_description(stock_symbol)
+    set_stock_price_and_description(stock_symbol, description, price, time)
 
 
 def lambda_handler(event, context):
